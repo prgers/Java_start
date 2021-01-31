@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf27eab6-1200-4101-b7f0-18bac7e71373" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/01-基础语法/src/FirstMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/02-面向对象/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/02-面向对象/src/com/prgers/model/GoodStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/02-面向对象/src/com/prgers/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/02-面向对象/src/com/prgers/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/03-static/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/03-static/src/com/prgers/Rocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/03-static/src/com/prgers/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/04-嵌套类_局部类/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/04-嵌套类_局部类/src/NestedClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Eatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/JiaJiao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Pig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Runnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Sleepable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/05-抽象类_接口/src/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/06-匿名类/src/com/prger/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/06-匿名类/src/com/prger/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/06-匿名类/src/com/prger/Runnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/06-匿名类/src/com/prger/utils/Times.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/Main$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/Runnable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/utils/Times$Block.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../first_part/Java基础/out/production/06-匿名类/com/prger/utils/Times.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-JDBC/03-JDBC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-JDBC/lib/mysql-connector-java-5.1.49.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-JDBC/lib/mysql-connector-java-8.0.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../03-JDBC/src/com/prgers/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/src/com/prgers/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/src/com/prgers/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/src/com/prgers/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/src/com/prgers/servlet/ListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/src/com/prgers/servlet/SaveServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/WEB-INF/lib/mysql-connector-java-5.1.49.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/page/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../04-crm/web/page/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/05-crm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/servlet/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/servlet/ListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/servlet/SaveServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/com/prgers/utils/Dbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/src/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/WEB-INF/lib/druid-1.1.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/WEB-INF/lib/mysql-connector-java-5.1.49.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/page/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/page/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05-crm/web/page/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/src/com/prgers/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/src/com/prgers/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/src/com/prgers/servlet/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/src/com/prgers/utils/Dbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/src/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/commons-collections-3.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/druid-1.1.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/hamcrest-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/hamcrest-core-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/junit-4.13.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/mysql-connector-java-5.1.49.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/spring-beans-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/spring-core-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/spring-jcl-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/spring-jdbc-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/spring-tx-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/page/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/page/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/page/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-crm/web/page/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/src/com/prgers/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/src/com/prgers/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/src/com/prgers/servlet/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/src/com/prgers/utils/Dbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/src/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/commons-beanutils-1.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/commons-collections-3.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/druid-1.1.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/hamcrest-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/hamcrest-core-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/junit-4.13.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/mysql-connector-java-5.1.49.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/spring-beans-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/spring-core-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/spring-jcl-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/spring-jdbc-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/spring-tx-5.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/page/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/page/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../07-crm/web/page/save.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prger/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/bean/BaseBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/bean/Website.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/dao/WebsiteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/servlet/BeanServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/servlet/WebsiteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/java/com/prger/utils/Dbs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/material-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/material-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/materialize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/css/theme-blue.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/img/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/img/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/js/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/admin/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/css/icmoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/css/plugins.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/css/style.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/font/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/font/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/font/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-108x108-01-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-108x108-02-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-116x116-default-2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-195x195.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-390x390-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-42x42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-54x54-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-54x54-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-58x58-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-58x58-default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/avatar/avatar-84x84-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/awards/award00.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/awards/award01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/experience/alibaba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/experience/bytedance.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/experience/tencent.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/img/project/prj-rel-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/js/modernizr-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/js/plugins.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/front/js/theme.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/img/captcha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/JavaScript-MD5/md5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/animate-css/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap-fileinput/bootstrap-fileinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap-fileinput/bootstrap-fileinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap-notify/bootstrap-notify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap-tagsinput/bootstrap-tagsinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/jquery-validation/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/jquery-validation/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/jquery-validation/messages_zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/node-waves/waves.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/node-waves/waves.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/node-waves/waves.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/node-waves/waves.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/node-waves/waves.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/asset/plugin/sweetalert/sweetalert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../XmgResume/src/main/webapp/page/admin/website.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1nqD38LXYlJXFg25BFQgeCI4OnP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf27eab6-1200-4101-b7f0-18bac7e71373" name="Default Changelist" comment="" />
+      <created>1612108524949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612108524949</updated>
+      <workItem from="1612108528730" duration="33000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
