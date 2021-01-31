@@ -11,7 +11,6 @@ public class WebsiteDao {
 
     /**
      * 获取所有网站信息
-     * @return
      */
     public List<Website> list() {
 
@@ -21,8 +20,6 @@ public class WebsiteDao {
 
     /**
      * 保存或者更新网站信息
-     * @param website
-     * @return
      */
     public boolean save(Website website) {
 
