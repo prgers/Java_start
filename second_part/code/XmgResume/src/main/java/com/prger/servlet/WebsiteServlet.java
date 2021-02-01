@@ -1,32 +1,31 @@
 package com.prger.servlet;
 
 import com.prger.bean.Website;
-import com.prger.dao.WebsiteDao;
+import com.prger.service.WebsiteService;
+import com.prger.service.impl.WebsiteServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/website/*")
 public class WebsiteServlet extends BaseServlet{
 
-    private WebsiteDao dao = new WebsiteDao();
+    private WebsiteService service = new WebsiteServiceImpl();
 
     /**
      * 进入网站信息界面
      */
     public void admin(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        List<Website> websites = dao.list();
+        List<Website> websites = service.list();
         Website website = (websites != null && !websites.isEmpty()) ? websites.get(0) : null;
 
         //转发到website.jsp
         request.setAttribute("website", website);
-        request.getRequestDispatcher("/page/admin/website.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/page/admin/website.jsp").forward(request, response);
     }
 
     /**
@@ -36,12 +35,12 @@ public class WebsiteServlet extends BaseServlet{
 
         Website website = new Website();
         BeanUtils.populate(website, request.getParameterMap());
-        boolean save = dao.save(website);
+        boolean save = service.save(website);
         if (save) {
             response.sendRedirect(request.getContextPath() + "/website/admin");
         }else {
             request.setAttribute("error","网站信息保存失败");
-            request.getRequestDispatcher("/page/error/jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/page/error/jsp").forward(request, response);
         }
     }
 }
