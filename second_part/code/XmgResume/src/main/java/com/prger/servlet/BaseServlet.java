@@ -36,7 +36,13 @@ public class BaseServlet extends HttpServlet {
             Method method = getClass().getMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);
             method.invoke(this, request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            Throwable exception = e;
+            exception.printStackTrace();
+            while (exception.getCause() != null) {
+                exception = exception.getCause();
+            }
+            request.setAttribute("error", exception.getClass().getSimpleName() + ":" + exception.getMessage());
+            request.getRequestDispatcher("/WEB-INF/page/error.jsp").forward(request, response);
         }
 
 

@@ -100,7 +100,7 @@
                     </a>
                 </li>
                 <li class="award">
-                    <a href="award.html">
+                    <a href="${ctx}/award/admin">
                         <i class="material-icons">plus_one</i>
                         <span>获奖成就</span>
                     </a>

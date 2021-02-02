@@ -1,30 +1,26 @@
 <%--
   Created by IntelliJ IDEA.
   User: PRG
-  Date: 2021/2/1
-  Time: 12:59
+  Date: 2021/2/2
+  Time: 23:37
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <html>
 <head>
-    <title>小码哥简历管理-专业技能</title>
+    <title>小码哥简历管理-获奖成就</title>
     <%@include file="common/head.jsp"%>
 </head>
 <body class="theme-blue">
-   
     <%@include file="common/middle.jsp"%>
-
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>专业技能</h2>
+                            <h2>获奖成就</h2>
                         </div>
                         <div class="body table-responsive">
                             <div class="menus">
@@ -43,7 +39,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <c:if test="${not empty skills}">
+
+                            <c:if test="${not empty awards}">
                                 <table class="table table-bordered table-hover table-striped">
                                     <thead>
                                     <tr>
@@ -53,29 +50,33 @@
                                             </div>
                                         </th>
                                         <th>名称</th>
-                                        <th>级别</th>
+                                        <th>图片</th>
+                                        <th>简介</th>
                                         <th>操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <form id="remove-form" action="${ctx}/skill/remove" method="post">
-                                        <c:forEach items="${skills}" var="skill">
+                                    <form id="remove-form" action="${ctx}/award/remove">
+                                        <c:forEach items="${awards}" var="award">
                                             <tr>
                                                 <td>
                                                     <div class="switch">
-                                                        <label><input name="id" type="checkbox" value="${skill.id}"><span class="lever switch-col-blue"></span></label>
+                                                        <label><input name="id" type="checkbox" value="${award.id}"><span class="lever switch-col-blue"></span></label>
                                                     </div>
                                                 </td>
-                                                <td>${skill.name}</td>
-                                                <td>${skill.levelString}</td>
+                                                <td>${award.name}</td>
+                                                <td>
+                                                    <img src="${ctx}/${award.image}">
+                                                </td>
+                                                <td>${award.intro}</td>
                                                 <td>
                                                     <button type="button" class="btn bg-blue waves-effect btn-xs"
-                                                            onclick="edit(${skill.json})">
+                                                            onclick="edit(${award.json})">
                                                         <i class="material-icons">edit</i>
                                                         <span>编辑</span>
                                                     </button>
                                                     <button type="button" class="btn bg-pink waves-effect btn-xs"
-                                                            onclick="remove(${skill.id}, '${skill.name}')">
+                                                            onclick="remove('${award.id}', ${award.name})">
                                                         <i class="material-icons">delete</i>
                                                         <span>删除</span>
                                                     </button>
@@ -98,11 +99,29 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">添加专业技能</h4>
+                    <h4 class="modal-title">添加获奖成就</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-validation" method="post" action="${ctx}/skill/save">
-                        <input type="hidden" name="id">
+                    <form class="form-validation" method="post" action="${ctx}/award/save" enctype="multipart/form-data">
+                        <input style="display: none" type="text" name="id">
+                        <input style="display: none" type="text" name="image">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
+                                <label>图片</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                <div class="form-group">
+                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        <div class="fileinput-new thumbnail">
+                                            <img src="${ctx}/asset/admin/img/noimage.png" alt="">
+                                        </div>
+                                        <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                        <i class="material-icons clear fileinput-exists" data-dismiss="fileinput">close</i>
+                                        <input type="file" name="imageFile" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
                                 <label for="name">名称</label>
@@ -119,19 +138,17 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 form-control-label">
-                                <label>级别</label>
+                                <label for="intro">简介</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
                                 <div class="form-group">
-                                    <select name="level">
-                                        <option value="0">了解</option>
-                                        <option value="1">熟悉</option>
-                                        <option value="2">掌握</option>
-                                        <option value="3">精通</option>
-                                    </select>
+                                    <div class="form-line">
+                                        <textarea name="intro" maxlength="1000" id="intro" cols="30" rows="5" class="form-control no-resize" placeholder="简介"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-3 col-xs-offset-3">
                                 <button class="btn btn-primary waves-effect m-l-15" type="submit">保存</button>
@@ -143,31 +160,41 @@
             </div>
         </div>
     </div>
-    
+
     <%@include file="common/foot.jsp"%>
-    
+
     <script>
-        $('.menu .list .skill').addClass('active')
+        $('.menu .list .award').addClass('active')
         addValidatorRules('.form-validation')
 
         const $addFormBox = $('#add-form-box')
-        const $addForm = $addFormBox.find("form")
-
+        const $addForm = $addFormBox.find('form')
+        const $img = $addForm.find('.fileinput .thumbnail img')
         function add() {
             $addFormBox.modal();
 
             //重置表单的内容
             $addForm[0].reset();
+
+            //重新设置图片
+            $img.attr('src', '${ctx}/asset/admin/img/noimage.png')
         }
         function edit(json) {
 
             add()
             //填充表单
             for (const k in json) {
-                $addForm.find('[name=' + k + ']').val(json[k])
+                const $input = $addForm.find('[name=' + k + ']')
+                if ($input.attr('type') === 'file') continue
+                $input.val(json[k])
+             }
+
+             //设置img的值
+            if (json.image) {
+                $img.attr('src', '${ctx}/' + json.image)
             }
         }
-    
+
         function remove(id, name) {
             swal({
                 title: "你确定？",
@@ -180,7 +207,7 @@
                 }
             }).then(willDelete => {
                 if (!willDelete) return
-                window.location.href = '${ctx}/skill/remove?id=' + id
+                window.location.href = '${ctx}/award/remove?id=' + id
                 // swal({
                 //     title: '删除成功',
                 //     text: '【' + name + '】已经被删除！',
@@ -190,7 +217,7 @@
                 // })
             })
         }
-    
+
         function removeAll() {
             swal({
                 title: "你确定？",
@@ -206,7 +233,7 @@
                 $('#remove-form').submit();
             })
         }
-    
+
         const $set = $(".table tbody tr input[type=checkbox]")
         const $removeAll = $('.table-responsive .removeAll')
         $('.table thead th input[type=checkbox]').change(function () {
@@ -227,7 +254,7 @@
                 $removeAll.prop('disabled', true)
             }
         })
-    
+
         $set.change(function () {
             $(this).parents('tr').toggleClass("active")
             if ($('.table tbody tr input[type=checkbox]:checked').length > 0) {
