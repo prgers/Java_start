@@ -1,8 +1,6 @@
 package com.prger.servlet;
 
 import com.prger.bean.Education;
-import com.prger.service.EducationService;
-import com.prger.service.impl.EducationServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.annotation.WebServlet;
@@ -13,15 +11,13 @@ import java.util.List;
 
 @WebServlet("/education/*")
 public class EducationServlet extends BaseServlet {
-
-    private EducationService service = new EducationServiceImpl();
     /**
      * 进入教育信息界面
      */
     public void admin(HttpServletRequest request, HttpServletResponse response) throws Exception {
         List<Education> educations = service.list();
         request.setAttribute("educations", educations);
-        request.getRequestDispatcher("/WEB-INF/page/admin/education.jsp").forward(request, response);
+        forward(request, response, "admin/education.jsp");
     }
 
     /**
@@ -33,10 +29,9 @@ public class EducationServlet extends BaseServlet {
 
         boolean save = service.save(education);
         if (save) {
-            response.sendRedirect( request.getContextPath() + "/education/admin");
+            redirect(request, response, "education/admin");
         }else {
-            request.setAttribute("error","教育信息保存失败");
-            request.getRequestDispatcher("/WEB-INF/page/error/jsp").forward(request, response);
+            forwardError(request, response, "教育信息保存失败");
         }
     }
 
@@ -53,10 +48,9 @@ public class EducationServlet extends BaseServlet {
 
         boolean remove = service.remove(list);
         if (remove) {
-            response.sendRedirect( request.getContextPath() + "/education/admin");
+            redirect(request, response, "education/admin");
         }else {
-            request.setAttribute("error","教育信息删除失败");
-            request.getRequestDispatcher("/WEB-INF/page/error/jsp").forward(request, response);
+            forwardError(request, response, "教育信息删除失败");
         }
     }
 

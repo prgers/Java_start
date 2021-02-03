@@ -2,7 +2,6 @@ package com.prger.dao.impl;
 
 import com.prger.bean.Education;
 import com.prger.dao.EducationDao;
-import com.prger.utils.Dbs;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class EducationDaoImpl extends BaseDaoImpl<Education> implements Educatio
     public List<Education> list() {
 
         String sql = "SELECT id, created_time, name, type, intro, begin_day, end_day FROM education";
-        return Dbs.getTpl().query(sql, new BeanPropertyRowMapper<>(Education.class));
+        return tpl.query(sql, new BeanPropertyRowMapper<>(Education.class));
     }
 
     /**
@@ -25,7 +24,7 @@ public class EducationDaoImpl extends BaseDaoImpl<Education> implements Educatio
     @Override
     public Education get(Integer id) {
         String sql = "SELECT id, created_time, name, type, intro, begin_day, end_day FROM education WHERE id = ?";
-        return Dbs.getTpl().queryForObject(sql, new BeanPropertyRowMapper<>(Education.class), id);
+        return tpl.queryForObject(sql, new BeanPropertyRowMapper<>(Education.class), id);
     }
 
     /**
@@ -48,12 +47,6 @@ public class EducationDaoImpl extends BaseDaoImpl<Education> implements Educatio
             args.add(id);
         }
 
-        return Dbs.getTpl().update(sql,args.toArray()) > 0;
-    }
-
-
-    @Override
-    protected String table() {
-        return "education";
+        return tpl.update(sql,args.toArray()) > 0;
     }
 }

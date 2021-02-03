@@ -6,8 +6,4 @@ import com.prger.service.WebsiteService;
 
 public class WebsiteServiceImpl extends BaseServiceImpl<Website> implements WebsiteService {
 
-    @Override
-    protected BaseDao<Website> newDao() {
-        return new WebsiteDaoImpl();
-    }
 }

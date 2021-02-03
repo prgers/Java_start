@@ -8,7 +8,20 @@ import java.util.List;
 public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     protected BaseDao<T> dao = newDao();
-    protected abstract BaseDao<T> newDao();
+    protected BaseDao<T> newDao() {
+        //com.prger.service.impl.WebsiteServiceImpl
+        //com.prger.dao.impl.WebsiteDaoImpl
+        try {
+            String clsName = getClass().getName()
+                    .replace(".service.", ".dao.")
+                    .replace("Service", "Dao");
+
+            return (BaseDao<T>) Class.forName(clsName).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
 
     @Override
     public List<T> list() {

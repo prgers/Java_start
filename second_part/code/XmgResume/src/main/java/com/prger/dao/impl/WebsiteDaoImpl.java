@@ -2,7 +2,6 @@ package com.prger.dao.impl;
 
 import com.prger.bean.Website;
 import com.prger.dao.WebsiteDao;
-import com.prger.utils.Dbs;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class WebsiteDaoImpl extends BaseDaoImpl<Website> implements WebsiteDao {
     public List<Website> list() {
 
         String sql = "SELECT id, created_time, footer FROM website";
-        return Dbs.getTpl().query(sql, new BeanPropertyRowMapper<>(Website.class));
+        return tpl.query(sql, new BeanPropertyRowMapper<>(Website.class));
     }
 
     /**
@@ -25,7 +24,7 @@ public class WebsiteDaoImpl extends BaseDaoImpl<Website> implements WebsiteDao {
     @Override
     public Website get(Integer id) {
         String sql = "SELECT id, created_time, footer FROM website WHERE id = ?";
-        return Dbs.getTpl().queryForObject(sql, new BeanPropertyRowMapper<>(Website.class), id);
+        return tpl.queryForObject(sql, new BeanPropertyRowMapper<>(Website.class), id);
     }
 
     /**
@@ -44,12 +43,6 @@ public class WebsiteDaoImpl extends BaseDaoImpl<Website> implements WebsiteDao {
             sql = "UPDATE website SET footer = ? WHERE id = ?";
             args.add(id);
         }
-       return Dbs.getTpl().update(sql, args.toArray()) > 0;
-    }
-
-
-    @Override
-    protected String table() {
-        return "website";
+       return tpl.update(sql, args.toArray()) > 0;
     }
 }

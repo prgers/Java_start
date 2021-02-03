@@ -1,6 +1,8 @@
 package com.prger.bean;
 
-public class Website extends BaseBean{
+import com.prger.bean.base.BaseBean;
+
+public class Website extends BaseBean {
     private String footer;
 
     public String getFooter() {

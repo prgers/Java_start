@@ -1,8 +1,9 @@
 package com.prger.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.prger.bean.base.BaseBean;
 
-public class Skill extends BaseBean{
+public class Skill extends BaseBean {
 
     private String name;
     private Integer level;

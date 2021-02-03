@@ -1,9 +1,7 @@
 package com.prger.dao.impl;
 
 import com.prger.bean.Award;
-import com.prger.bean.Education;
 import com.prger.dao.AwardDao;
-import com.prger.utils.Dbs;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import java.util.ArrayList;
@@ -13,13 +11,13 @@ public class AwardDaoImpl extends BaseDaoImpl<Award> implements AwardDao {
     @Override
     public List<Award> list() {
         String sql = "SELECT id, created_time, name, image, intro FROM award";
-        return Dbs.getTpl().query(sql, new BeanPropertyRowMapper<>(Award.class));
+        return tpl.query(sql, new BeanPropertyRowMapper<>(Award.class));
     }
 
     @Override
     public Award get(Integer id) {
         String sql = "SELECT id, created_time, name, image, intro FROM award WHERE id = ?";
-        return Dbs.getTpl().queryForObject(sql, new BeanPropertyRowMapper<>(Award.class), id);
+        return tpl.queryForObject(sql, new BeanPropertyRowMapper<>(Award.class), id);
     }
 
     @Override
@@ -37,11 +35,20 @@ public class AwardDaoImpl extends BaseDaoImpl<Award> implements AwardDao {
             args.add(id);
         }
 
-        return Dbs.getTpl().update(sql,args.toArray()) > 0;
+        return tpl.update(sql,args.toArray()) > 0;
     }
 
     @Override
-    protected String table() {
-        return "award";
+    public List<String> getImageList(List<Integer> list) {
+        //根据id获取所有的图片路径
+        List<Integer> args = new ArrayList<>();
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT image FROM award").append(" WHERE id IN (");
+        for (Integer id : list) {
+            sql.append("?, ");
+            args.add(id);
+        }
+        sql.replace(sql.length() - 2, sql.length(), ")");
+        return tpl.queryForList(sql.toString(), String.class, args.toArray());
     }
 }

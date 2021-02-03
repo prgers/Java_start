@@ -1,10 +1,11 @@
 package com.prger.bean;
-
 import com.prger.bean.base.BaseBean;
+import com.prger.bean.base.DateBean;
 
-public class Award extends BaseBean {
+public class Company extends BaseBean {
     private String name;
-    private String image;
+    private String logo;
+    private String website;
     private String intro;
 
     public String getName() {
@@ -15,12 +16,20 @@ public class Award extends BaseBean {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
     public String getIntro() {

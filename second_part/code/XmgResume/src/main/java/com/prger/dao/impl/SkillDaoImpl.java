@@ -2,7 +2,6 @@ package com.prger.dao.impl;
 
 import com.prger.bean.Skill;
 import com.prger.dao.SkillDao;
-import com.prger.utils.Dbs;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ public class SkillDaoImpl extends BaseDaoImpl<Skill> implements SkillDao {
     @Override
     public List<Skill> list() {
         String sql = "SELECT id, created_time, name, level FROM skill";
-        return Dbs.getTpl().query(sql, new BeanPropertyRowMapper<>(Skill.class));
+        return tpl.query(sql, new BeanPropertyRowMapper<>(Skill.class));
     }
 
     @Override
@@ -29,17 +28,12 @@ public class SkillDaoImpl extends BaseDaoImpl<Skill> implements SkillDao {
             args.add(id);
         }
 
-        return Dbs.getTpl().update(sql,args.toArray()) > 0;
+        return tpl.update(sql,args.toArray()) > 0;
     }
 
     @Override
     public Skill get(Integer id) {
         String sql = "SELECT id, created_time, name, level FROM skill WHERE id = ?";
-        return Dbs.getTpl().queryForObject(sql, new BeanPropertyRowMapper<>(Skill.class), id);
-    }
-
-    @Override
-    protected String table() {
-        return "skill";
+        return tpl.queryForObject(sql, new BeanPropertyRowMapper<>(Skill.class), id);
     }
 }
