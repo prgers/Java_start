@@ -66,7 +66,9 @@
                                                 </td>
                                                 <td>${award.name}</td>
                                                 <td>
-                                                    <img src="${ctx}/${award.image}">
+                                                    <c:if test="${not empty award.image}">
+                                                        <img src="${ctx}/${award.image}">
+                                                    </c:if>
                                                 </td>
                                                 <td>${award.intro}</td>
                                                 <td>
@@ -76,7 +78,7 @@
                                                         <span>编辑</span>
                                                     </button>
                                                     <button type="button" class="btn bg-pink waves-effect btn-xs"
-                                                            onclick="remove('${award.id}', ${award.name})">
+                                                            onclick="remove('${award.id}', '${award.name}')">
                                                         <i class="material-icons">delete</i>
                                                         <span>删除</span>
                                                     </button>
@@ -173,7 +175,7 @@
         function add() {
             $addFormBox.modal();
 
-            //重置表单的内容
+            //重置表单的内容(重置表单，并不会去重置type=hidden的表单)
             $addForm[0].reset();
 
             //重新设置图片

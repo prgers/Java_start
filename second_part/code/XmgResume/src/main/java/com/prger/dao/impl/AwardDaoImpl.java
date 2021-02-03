@@ -33,7 +33,7 @@ public class AwardDaoImpl extends BaseDaoImpl<Award> implements AwardDao {
         if (id == null || id < 1) {
             sql = "INSERT INTO award(name, image, intro) VALUES(?, ?, ?)";
         } else {
-            sql = "UPDATE education SET name = ?, image = ?, intro = ? WHERE id = ?";
+            sql = "UPDATE award SET name = ?, image = ?, intro = ? WHERE id = ?";
             args.add(id);
         }
 
