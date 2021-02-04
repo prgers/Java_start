@@ -42,6 +42,8 @@ public abstract class BaseServlet<T> extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        System.out.println(request.getRequestURI());
+        System.out.println(request.getRequestURL());
         //设置请求编码
         request.setCharacterEncoding("UTF-8");
         try {

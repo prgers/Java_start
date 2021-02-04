@@ -3,6 +3,7 @@ package com.prger.utils;
 import com.prger.bean.Company;
 import com.prger.bean.Experience;
 import com.prger.bean.Project;
+import com.prger.bean.User;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -13,7 +14,8 @@ public class TplTest {
     private static final Class[] CLSES = {
             Company.class,
             Project.class,
-            Experience.class
+            Experience.class,
+            User.class
     };
     private static final Map<String, String> TPL_DIRS = new HashMap<>();
     private static final String BASE_DIR = "D:\\Git_Repositories\\Java_start\\second_part\\code\\XmgResume\\src\\main\\java\\com\\prger";
