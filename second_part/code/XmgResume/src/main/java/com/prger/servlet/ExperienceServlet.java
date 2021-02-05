@@ -1,10 +1,12 @@
 package com.prger.servlet;
 
-import com.prger.bean.Company;
-import com.prger.bean.Experience;
-import com.prger.bean.Skill;
+import com.prger.bean.*;
 import com.prger.service.CompanyService;
+import com.prger.service.UserService;
+import com.prger.service.WebsiteService;
 import com.prger.service.impl.CompanyServiceImpl;
+import com.prger.service.impl.UserServiceImpl;
+import com.prger.service.impl.WebsiteServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +19,8 @@ import java.util.List;
 public class ExperienceServlet extends BaseServlet<Experience> {
 
     private CompanyService companyService = new CompanyServiceImpl();
+    private UserService userService = new UserServiceImpl();
+    private WebsiteService websiteService = new WebsiteServiceImpl();
     /**
      * 进入工作经验界面
      */
@@ -65,5 +69,19 @@ public class ExperienceServlet extends BaseServlet<Experience> {
         }else {
             forwardError(request, response, "工作经验删除失败");
         }
+    }
+
+    public void front(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        List<Experience> experiences = service.list();
+        request.setAttribute("experiences", experiences);
+
+        // 用户信息
+        User user = userService.list().get(0);
+        request.setAttribute("user", user);
+        // 网站的底部信息
+        request.setAttribute("footer", websiteService.list().get(0).getFooter());
+
+        forward(request, response, "front/experience.jsp");
     }
 }

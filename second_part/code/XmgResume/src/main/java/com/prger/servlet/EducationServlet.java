@@ -1,6 +1,11 @@
 package com.prger.servlet;
 
 import com.prger.bean.Education;
+import com.prger.bean.User;
+import com.prger.service.UserService;
+import com.prger.service.WebsiteService;
+import com.prger.service.impl.UserServiceImpl;
+import com.prger.service.impl.WebsiteServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +16,11 @@ import java.util.List;
 
 @WebServlet("/education/*")
 public class EducationServlet extends BaseServlet {
+
+    private UserService userService = new UserServiceImpl();
+    private WebsiteService websiteService = new WebsiteServiceImpl();
+
+
     /**
      * 进入教育信息界面
      */
@@ -53,5 +63,19 @@ public class EducationServlet extends BaseServlet {
             forwardError(request, response, "教育信息删除失败");
         }
     }
+
+    public void front(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        List<Education> educations = service.list();
+        request.setAttribute("educations", educations);
+
+        // 用户信息
+        User user = userService.list().get(0);
+        request.setAttribute("user", user);
+        // 网站的底部信息
+        request.setAttribute("footer", websiteService.list().get(0).getFooter());
+
+        forward(request, response, "front/education.jsp");
+    }
+
 
 }

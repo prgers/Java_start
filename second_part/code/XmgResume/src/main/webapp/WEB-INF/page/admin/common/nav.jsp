@@ -38,17 +38,17 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="${ctx}/asset/admin/img/avatar.png" alt="User">
+                <img src="${ctx}/${user.photo}" alt="User">
             </div>
             <div class="info-container">
-                <div class="name">M了个J</div>
-                <div class="email">小码哥 | 讲师</div>
+                <div class="name">${user.name}</div>
+                <div class="email">${user.job}</div>
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="${ctx}/front/user.html"><i class="material-icons">person</i>个人信息</a></li>
+                        <li><a href="${ctx}"><i class="material-icons">person</i>个人简历</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="${ctx}/login.html"><i class="material-icons">input</i>退出登录</a></li>
+                        <li><a href="${ctx}/user/logout"><i class="material-icons">input</i>退出登录</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li class="password">
-                    <a href="${ctx}/password/admin">
+                    <a href="${ctx}/user/password">
                         <i class="material-icons">lock</i>
                         <span>修改密码</span>
                     </a>

@@ -3,8 +3,13 @@ package com.prger.servlet;
 import com.prger.bean.Company;
 import com.prger.bean.Project;
 import com.prger.bean.UploadParams;
+import com.prger.bean.User;
 import com.prger.service.CompanyService;
+import com.prger.service.UserService;
+import com.prger.service.WebsiteService;
 import com.prger.service.impl.CompanyServiceImpl;
+import com.prger.service.impl.UserServiceImpl;
+import com.prger.service.impl.WebsiteServiceImpl;
 import com.prger.utils.Uploads;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.fileupload.FileItem;
@@ -23,6 +28,8 @@ import java.util.Map;
 public class ProjectServlet extends BaseServlet<Project> {
 
     private CompanyService companyService = new CompanyServiceImpl();
+    private UserService userService = new UserServiceImpl();
+    private WebsiteService websiteService = new WebsiteServiceImpl();
     /**
      * 进入项目经验界面
      */
@@ -75,5 +82,15 @@ public class ProjectServlet extends BaseServlet<Project> {
         }else {
             forwardError(request, response, "项目经验删除失败");
         }
+    }
+
+    public void front(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.setAttribute("projects", service.list());
+        // 用户信息
+        User user = userService.list().get(0);
+        request.setAttribute("user", user);
+        // 网站的底部信息
+        request.setAttribute("footer", websiteService.list().get(0).getFooter());
+        forward(request, response, "front/project.jsp");
     }
 }

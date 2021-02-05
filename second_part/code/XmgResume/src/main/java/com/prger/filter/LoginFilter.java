@@ -21,7 +21,9 @@ public class LoginFilter implements Filter {
             chain.doFilter(req, resp);
         } else if (uri.contains("/admin")
                 || uri.contains("/save")
-                || uri.contains("/remove")) {
+                || uri.contains("/remove")
+                || uri.contains("/user/password")
+                || uri.contains("/user/updatePassword")) {
             Object user = request.getSession().getAttribute("user");
             //判断session中是否存在用户信息
             if (user != null) {//存在，表示登录过
