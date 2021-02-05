@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>小码哥简历管理-登录</title>
-    <%@include file="../WEB-INF/page/admin/common/head.jsp"%>
+    <%@include file="../WEB-INF/page/admin/common/style.jsp"%>
 </head>
 <body class="login-page">
 <div class="login-box">
@@ -26,7 +26,7 @@
                             <i class="material-icons">email</i>
                         </span>
                     <div class="form-line">
-                        <input type="email" class="form-control" name="email" maxlength="50" placeholder="邮箱" required autofocus>
+                        <input type="email" class="form-control" name="email" value="prg@qq.com" maxlength="50" placeholder="邮箱" required autofocus>
                     </div>
                 </div>
                 <div class="input-group form-group">
@@ -35,7 +35,7 @@
                         </span>
                     <div class="form-line">
                         <input type="hidden" name="password">
-                        <input id="originPassword" type="password" class="form-control" maxlength="20"placeholder="密码" required>
+                        <input id="originPassword" type="password" value="666" class="form-control" maxlength="20"placeholder="密码" required>
                     </div>
                 </div>
                 <div class="input-group form-group captcha">
@@ -43,7 +43,7 @@
                             <i class="material-icons">security</i>
                         </span>
                     <div class="form-line">
-                        <input type="text" class="form-control" name="captcha" placeholder="验证码" required>
+                        <input type="text" class="form-control" name="captcha" value="888" placeholder="验证码" required>
                     </div>
                     <img id="captcha" src="${ctx}/user/captcha" alt="验证码">
                 </div>
@@ -61,7 +61,7 @@
     </div>
 </div>
 
-<%@include file="../WEB-INF/page/admin/common/foot.jsp"%>>
+<%@include file="../WEB-INF/page/admin/common/script.jsp"%>>
 <script src="${ctx}/asset/plugin/JavaScript-MD5/md5.min.js"></script>
 <script>
     addValidatorRules('.form-validation', function () {

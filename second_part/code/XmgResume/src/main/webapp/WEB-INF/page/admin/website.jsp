@@ -10,11 +10,11 @@
 <html>
 <head>
     <title>小码哥简历管理-网站信息</title>
-    <%@include file="common/head.jsp"%>
+    <%@include file="common/style.jsp"%>
 </head>
 <body class="theme-blue">
 
-<%@include file="common/middle.jsp"%>
+<%@include file="common/nav.jsp"%>
 
 <section class="content">
     <div class="container-fluid">
@@ -56,7 +56,7 @@
     </div>
 </section>
 
-<%@include file="common/foot.jsp"%>>
+<%@include file="common/script.jsp"%>>
 
 <script>
     $('.menu .list .website').addClass('active')

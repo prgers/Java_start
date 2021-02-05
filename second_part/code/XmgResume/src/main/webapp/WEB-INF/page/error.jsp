@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>小码哥教育-Error</title>
-    <%@include file="admin/common/head.jsp"%>
+    <%@include file="admin/common/style.jsp"%>
 </head>
 <body class="five-zero-zero">
 <div class="five-zero-zero-container">

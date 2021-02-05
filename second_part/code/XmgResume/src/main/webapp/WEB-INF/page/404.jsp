@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>小码哥教育-404</title>
-    <%@ include file="admin/common/head.jsp"%>
+    <%@ include file="admin/common/style.jsp"%>
 </head>
 <body class="four-zero-four">
 <div class="four-zero-four-container">

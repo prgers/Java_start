@@ -18,7 +18,8 @@ import java.util.Properties;
 @WebServlet("/user/*")
 public class UserServlet extends BaseServlet<User> {
     public void admin(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
+        request.setAttribute("user", service.list().get(0));
+        forward(request, response, "admin/user.jsp");
     }
 
     public void save(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -27,30 +28,31 @@ public class UserServlet extends BaseServlet<User> {
 
     public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        //获取验证码
-        String captcha = request.getParameter("captcha").toLowerCase();
-
-        //从Session中取出验证码
-        String code = (String) request.getSession().getAttribute("code");
-
-        //判断验证码是否正确
-        if (!captcha.equals(code)) {
-            forwardError(request, response, "验证码不正确");
-        } else {
+//        //获取验证码
+//        String captcha = request.getParameter("captcha").toLowerCase();
+//
+//        //从Session中取出验证码
+//        String code = (String) request.getSession().getAttribute("code");
+//
+//        //判断验证码是否正确
+//        if (!captcha.equals(code)) {
+//            forwardError(request, response, "验证码不正确");
+//        } else {
 
             //获取用户名和密码
             User user = new User();
             BeanUtils.populate(user, request.getParameterMap());
 
-
             //根据请求信息去数据库查询用户信息
             user = ((UserService) service).get(user);
             if (user != null) { //用户名，密码正确
                 redirect(request, response, "user/admin");
+                //将用户信息保存至session中
+                request.getSession().setAttribute("user", user);
             } else {
                 forwardError(request, response, "邮箱或密码不正确");
             }
-        }
+//        }
     }
 
     public void captcha(HttpServletRequest request, HttpServletResponse response) throws Exception {
