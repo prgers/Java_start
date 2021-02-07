@@ -17,7 +17,7 @@ public class LoginFilter implements Filter {
         String uri = request.getRequestURI();
 
         //对request进行过滤
-        if (uri.contains("/asset/")) { //对加载web资源放行
+        if (uri.contains("/asset/") || uri.contains("/contact/save")) { //对加载web资源放行
             chain.doFilter(req, resp);
         } else if (uri.contains("/admin")
                 || uri.contains("/save")

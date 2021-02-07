@@ -182,7 +182,6 @@
             $img.attr('src', '${ctx}/asset/admin/img/noimage.png')
         }
         function edit(json) {
-
             add()
             //填充表单
             for (const k in json) {

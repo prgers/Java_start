@@ -18,7 +18,7 @@ public class BaseBean {
         this.id = id;
     }
 
-    @JsonIgnore
+    //@JsonIgnore
     public Date getCreatedTime() {
         return createdTime;
     }
@@ -36,9 +36,7 @@ public class BaseBean {
     public String getJson() throws Exception {
 
         ObjectMapper mapper = new ObjectMapper();
-        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
+        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
         return mapper.writeValueAsString(this).replace("\"", "'");
-
-
     }
 }

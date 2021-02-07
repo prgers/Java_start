@@ -1,5 +1,6 @@
 package com.prger.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.prger.bean.base.BaseBean;
 
 public class Award extends BaseBean {
@@ -14,7 +15,6 @@ public class Award extends BaseBean {
     public void setName(String name) {
         this.name = name;
     }
-
     public String getImage() {
         return image;
     }
@@ -30,4 +30,6 @@ public class Award extends BaseBean {
     public void setIntro(String intro) {
         this.intro = intro;
     }
+
+
 }

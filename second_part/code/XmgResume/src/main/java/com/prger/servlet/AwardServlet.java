@@ -21,6 +21,7 @@ public class AwardServlet extends BaseServlet{
      */
     public void admin(HttpServletRequest request, HttpServletResponse response) throws Exception {
         List<Award> awards = service.list();
+        System.out.println(awards);
         request.setAttribute("awards", awards);
         forward(request, response, "admin/award.jsp");
     }
