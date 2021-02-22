@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="job">
+
+<!--
+    readOnly
+    设置为true，代表缓存的是对原对象的引用
+    设置为false，代表缓存的是对原对象序列化后的拷贝对象
+    所以设置false，要求实现Serializable接口
+-->
+    <cache readOnly="true"/>
+    
+    <sql id="sqlListAll">
+        SELECT * FROM job
+    </sql>
+
+    <select id="list" resultType="Job">
+        <include refid="sqlListAll" />
+    </select>
+
+    <select id="get" parameterType="int" resultType="Job">
+        <include refid="sqlListAll" /> WHERE id = #{id}
+    </select>
+
+    <update id="update" parameterType="Job">
+        UPDATE job SET name = #{name}, duty = #{duty} WHERE id = #{id}
+    </update>
+
+</mapper>
