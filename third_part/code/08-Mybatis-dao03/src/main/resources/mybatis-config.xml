@@ -40,6 +40,6 @@
 
     <mappers>
         <!-- 添加实体映射文件的路径 -->
-        <mapper resource="mappers/job.xml"/>
+        <mapper class="com.prger.dao.JobDao" />
     </mappers>
 </configuration>

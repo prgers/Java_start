@@ -1,6 +1,4 @@
 package com.prger.test;
-
-import com.prger.bean.IdCard;
 import com.prger.bean.Job;
 import com.prger.bean.Person;
 import com.prger.utils.MyBatises;
