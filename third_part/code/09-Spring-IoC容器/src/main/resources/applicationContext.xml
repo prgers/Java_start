@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="service" class="com.prger.service.impl.PersonServiceImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+    <bean id="dao" class="com.prger.dao.impl.PersonDaoImpl"/>
+
+    <bean id="servlet" class="com.prger.servlet.PersonServlet">
+        <property name="service" ref="service"/>
+    </bean>
+
+
+
+</beans>

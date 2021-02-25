@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.prger.domain.Person">
+        <property name="age" value="18"/>
+        <property name="name" value="Jack"/>
+    </bean>
+
+    <bean id="dog" class="com.prger.domain.Dog"/>
+
+    <bean id="person2" class="com.prger.domain.Person">
+        <property name="dog" ref="dog"/>
+    </bean>
+
+    <bean id="person3" class="com.prger.domain.Person" p:age="20" p:name="Rose" p:dog-ref="dog"/>
+
+    <bean id="person4" class="com.prger.domain.Person">
+        <property name="dog">
+            <bean class="com.prger.domain.Dog"/>
+        </property>
+    </bean>
+
+    <bean id="person5" class="com.prger.domain.Person">
+        <property name="amout" value="18.99"/>
+    </bean>
+
+    <bean id="person6" class="com.prger.domain.Person">
+        <property name="list">
+            <array>
+                <value>哈哈哈</value>
+                <value>嘿嘿嘿</value>
+                <value>呵呵呵</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="person7" class="com.prger.domain.Person">
+        <property name="friends">
+            <map>
+                <entry key="Jack" value="广州"/>
+                <entry key="Rose" value="上海"/>
+                <entry key="Tom" value="深圳"/>
+            </map>
+        </property>
+    </bean>
+
+<!--    <bean id="person8" class="com.prger.domain.Person">-->
+<!--        <constructor-arg value="10"/>-->
+<!--        <constructor-arg value="Jack"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="person8" class="com.prger.domain.Person">-->
+<!--        <constructor-arg value="10" index="0"/>-->
+<!--        <constructor-arg value="Jack" index="1"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="person8" class="com.prger.domain.Person">-->
+<!--        <constructor-arg value="10" type="java.lang.Integer"/>-->
+<!--        <constructor-arg value="Jack" type="java.lang.String"/>-->
+<!--    </bean>-->
+
+    <bean id="person8" class="com.prger.domain.Person">
+        <constructor-arg value="10" name="age"/>
+        <constructor-arg value="Jack" name="name"/>
+    </bean>
+
+    <bean id="person9" class="com.prger.domain.Person">
+        <constructor-arg ref="dog"/>
+    </bean>
+
+    <bean id="person10" class="com.prger.domain.Person">
+        <constructor-arg>
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
