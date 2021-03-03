@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 解析失败，抛出异常 -->
+<!--<div th:text="I love coding."></div>-->
+
+<!-- Ilovecoding -->
+<div th:text="Ilovecoding."></div>
+
+<div th:text="'I love coding.'"></div>
+
+<div th:text="${name} + ' love coding.'"></div>
+<div th:text="'${name} + love coding.'"></div>
+<div th:text="${name} +| love| + ' coding.'"></div>
+<div th:text="|${name} love coding.|"></div>
+
+<div th:text="2020"></div>
+<div th:text="2020 * 2"></div>
+<div th:text="${age} % 2"></div>
+<div th:text="${age} % 2 == 0"></div>
+
+<hr>
+
+<div th:with="isEven=${age % 2 == 0}, myName=${name}">
+    <div th:text="${isEven}"></div>
+    <div th:text="${myName}"></div>
+
+    <div th:text="${myName}" th:class="${isEven} ? 'even' : 'odd'"></div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /prger
+
+
+student:
+  name: prger
+  hobbies: [足球, 篮球]
+  numbers: [25, 9, 10]
+  jobs:
+    - 程序员
+    - 厨师
+  homes:
+    - sz: 坪洲
+  dog:
+    age: 2
+    name: Tom
+  books:
+    - price: 10.1
+      name: iOS
+    - price: 22.2
+      name: Java

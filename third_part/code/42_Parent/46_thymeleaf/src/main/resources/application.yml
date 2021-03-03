@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    enabled: true
+    servlet:
+      content-type: text/html
+
+
+  #关闭参考系统语言
+  messages:
+    fallback-to-system-locale: false
+    #属性文件名(默认就是messages)
+#    basename: messages

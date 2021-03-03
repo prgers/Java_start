@@ -11,15 +11,12 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="skill/add" method="post">
+    <form action="encoding/login" method="post">
         <div>
-            名称<input type="text" name="name">
+            用户<input type="text" name="username">
         </div>
         <div>
-            描述<input type="text" name="intro">
-        </div>
-        <div>
-            等级<input type="text" name="my_level">
+            密码<input type="text" name="password">
         </div>
         <div>
             <button type="submit">添加</button>

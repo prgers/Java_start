@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job</title>
+</head>
+<body>
+
+<div>
+    <a th:href="@{/jobs/get/1}" target="_blank">单个</a>
+</div>
+
+<div>
+    <a th:href="@{/jobs/list}" target="_blank">列表</a>
+</div>
+
+<div>
+    保存
+    <form th:action="@{/jobs/save}" method="post">
+        <input type="text" name="id" placeholder="id">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="duty" placeholder="duty">
+        <button type="submit">保存</button>
+    </form>
+</div>
+
+<div>
+    删除
+    <form th:action="@{/jobs/remove}" method="post">
+        <input type="text" name="id" placeholder="id">
+        <button type="submit">删除</button>
+    </form>
+</div>
+
+</body>
+</html>

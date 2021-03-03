@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>row</th>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+    <tr th:each="person, status: ${persons}">
+        <td th:text="${status.index}"></td>
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>row</th>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+    <tr th:each="person, status: ${persons}" th:object="${person}">
+        <td th:text="${status.index}"></td>
+        <td th:text="*{id}"></td>
+        <td th:text="*{name}"></td>
+    </tr>
+</table>
+
+<div th:each="person, status: ${persons}" th:object="${person}">
+    <div th:text="${status.index}"></div>
+    <div th:text="*{id}"></div>
+    <div th:text="*{name}"></div>
+</div>
+
+<hr>
+
+<div>
+    <!--/*/ <th:block th:each="person : ${persons}" th:object="${person}"> /*/-->
+        <div th:text="*{id}"></div>
+        <div th:text="*{name}"></div>
+    <!--/*/ </th:block> /*/-->
+</div>
+
+</body>
+</html>
