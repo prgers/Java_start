@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+status: 控制log4j内部日志打印级别
+monitorInterval：每隔多少秒扫描
+<Configuration status="WARN" monitorInterval="5">
+-->
+<Configuration>
+    <Properties>
+        <Property name="PATTERN" value="%d{HH:mm:ss.SSS} [%t] %-5p: %msg%n"/>
+        <Property name="CHARSET" value="UTF-8"/>
+        <Property name="BASE_NAME" value="log4j2"/>
+        <Property name="BASE_Path" value="G:/logs"/>
+    </Properties>
+    <Appenders>
+        <!-- target：可以去默认值SYSTEM_OUT(默认值)、SYSTEM_ERR-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}" charset="${CHARSET}" />
+            <!-- 关闭 大于等于 WARN级别的日志-->
+            <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="ACCEPT"/>
+            <!-- 只开启 大于等于 WARN级别的日志-->
+<!--            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>-->
+
+<!--            <Filters>-->
+<!--                &lt;!&ndash; 只开启[DEBUG WARN]级别的日志 NEUTRAL保持中立会传递给下一个Filter-->
+<!--                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL"/>-->
+<!--                <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--                &ndash;&gt;-->
+
+<!--                &lt;!&ndash; 只开启[DEBUG WARN]级别的日志 &ndash;&gt;-->
+<!--                <LevelRangeFileter minLevel="WARN" maxLevel="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--            </Filters>-->
+        </Console>
+
+<!--        <File name="file" fileName="${BASE_PATH}/${BASE_NAME}_file.log">-->
+<!--            <PatternLayout pattern="${PATTERN}" charset="${CHARSET}" />-->
+<!--        </File>-->
+
+<!--        <RollingFile name="rollingFile"-->
+<!--                     fileName="${BASE_PATH}/${BASE_NAME}_roll.log"-->
+<!--                     filePattern="${BASE_PATH}/%d{yyyy}%d{MM}%/{dd}/HH_mm_ss_%i.log.gz">-->
+<!--            <PatternLayout pattern="${PATTERN}" charset="${CHARSET}" />-->
+<!--            <Policies>-->
+<!--                &lt;!&ndash; 基于时间的滚动策略：当时间跨度达到2小时就滚动&ndash;&gt;-->
+<!--                &lt;!&ndash; 时间单位取决于filePattern的最小时间单位&ndash;&gt;-->
+<!--                <TimeBasedTRiggeringPolicy interval="10"/>-->
+
+<!--                &lt;!&ndash; 基于文件大小的滚动策略：当文件大小达到10KB时就滚动&ndash;&gt;-->
+<!--                <SizeBasedTriggeringPolicy size="10KB"/>-->
+<!--            </Policies>-->
+<!--            &lt;!&ndash; 设置%i的最大值，默认是7 &ndash;&gt;-->
+<!--            <DefaultRolloverStrategy max="100">-->
+<!--                &lt;!&ndash; maxDepth：要访问目录的最大级别数，默认值1，代表仅访问basePath目录中的文件 &ndash;&gt;-->
+<!--                <Delete basePath="${BASE_PATH}" maxDepth="10">-->
+<!--                    &lt;!&ndash; IfFileName && IfLastModified &ndash;&gt;-->
+<!--                    &lt;!&ndash; 填写相对于basePath的相对路径 &ndash;&gt;-->
+<!--                    <IfFileName glob="*.log.gz"/>-->
+<!--                    &lt;!&ndash; 文件的时间超过5s &ndash;&gt;-->
+<!--                    <IfLastModified age="5s">-->
+<!--                        &lt;!&ndash; IfAccumulatedFileSize || IfAccumulatedFileCount &ndash;&gt;-->
+<!--                        <IfAny>-->
+<!--                            <IfAccumulatedFileSize exceeds="20KB"/>-->
+<!--                            <IfAccumulatedFileCount exceeds="10"/>-->
+<!--                        </IfAny>-->
+<!--                    </IfLastModified>-->
+<!--                </Delete>-->
+<!--            </DefaultRolloverStrategy>-->
+<!--        </RollingFile>-->
+<!--        <Async name="Async">-->
+<!--            <Appender-ref redf="RollingFile"/>-->
+<!--        </Async>-->
+    </Appenders>
+    <Loggers>
+        <Logger name="com.prger" level="TRACE" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

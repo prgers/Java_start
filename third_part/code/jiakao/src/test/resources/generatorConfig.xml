@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="default" targetRuntime="MyBatis3Simple">
+        <commentGenerator>
+            <!-- 去除所有注释 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/jiakao?serverTimezone=GMT%2B8"
+                        userId="root" password="root"/>
+
+        <!-- Model的位置 -->
+        <javaModelGenerator targetPackage="com.prger.jk.pojo.po"
+                            targetProject="src/test/java"/>
+
+        <!-- XML的位置 -->
+        <sqlMapGenerator targetPackage="com.prger.jk.mapper"
+                         targetProject="src/test/resources"/>
+
+        <!-- Mapper的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.prger.jk.mapper"
+                             targetProject="src/test/java"/>
+
+        <!-- %代表所有表 -->
+        <table tableName="%"/>
+    </context>
+</generatorConfiguration>

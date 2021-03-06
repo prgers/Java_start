@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<configuration debug="true" scan="true" scanPeriod="5 seconds">
+debug：可以打印logback内部日志
+scan: 扫描配置文件
+scanPeriod：每隔30秒扫描一次配置文件
+scanPeriod单位: milliseconds, seconds, minutes, hours
+-->
+<configuration>
+    <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%t]: %m%n"/>
+    <property name="CHARSET" value="UTF-8"/>
+    <property name="BASE_PATH" value="G:/logs"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>${CHARSET}</charset>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            &lt;!&ndash; 只打印WARN级别的信息&ndash;&gt;-->
+<!--            <level>ERROR</level>-->
+<!--            &lt;!&ndash; 当匹配: 接收(开启打印)&ndash;&gt;-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            &lt;!&ndash; 当不匹配: 否定(关闭打印)&ndash;&gt;-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+    </appender>
+
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>${BASE_PATH}/logback_file.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>${CHARSET}</charset>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${BASE_PATH}/logback_rollFile.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>${CHARSET}</charset>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+        <!-- 基于时间的滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--支持压缩-->
+            <fileNamePattern>${BASE_PATH}logback_rolling_%d{yyyy-MM-dd-HH-mm-ss}.log.gz</fileNamePattern>
+            <!-- 删除20秒以前的日志文件(时间单位取决于fileNamePattern)-->
+            <maxHistory>20</maxHistory>
+            <!-- 总的日志大小限制(超过了就删除最早的日志)-->
+            <totalSizeCap>10KB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${BASE_PATH}/logback_rollFile2.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>${CHARSET}</charset>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+        <!-- 基于文件大小和时间的滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--支持压缩-->
+            <fileNamePattern>${BASE_PATH}logback_rolling_%d{HH-mm}_%i.log.gz</fileNamePattern>
+            <!-- 当日志文件大小超过1MB，就生成新的日志文件-->
+            <maxFileSize>1MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 异步-->
+    <appender name="async" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- 阻塞队列的容量-->
+        <param name="queueSize" value="512"/>
+        <!-- 当阻塞队列剩余20%容量时，会默认丢弃TRACE、DEBUG、INFO级别的日志-->
+        <!-- discardingThreshold设置为0，就不会丢弃-->
+        <param name="discardingThreshold" value="0"/>
+        <appender-ref ref="file"/>
+    </appender>
+
+    <root level="TRACE">
+        <appender-ref ref="console"/>
+    </root>
+    <logger name="com.prger" level="TRACE" additivity="true">
+        <appender-ref ref="rollingFile"/>
+    </logger>
+</configuration>

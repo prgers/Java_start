@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration
+        PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+<!--
+开启内部日志
+<log4j:configuration debug="true">
+-->
+<log4j:configuration>
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%t]: %m%n"/>
+        </layout>
+
+        <!-- 关闭所有的日志输出 -->
+<!--        <filter class="org.apache.log4j.varia.DenyAllFilter" />-->
+
+        <!-- 关闭INFO日志输出 -->
+<!--        <filter class="org.apache.log4j.varia.LevelMatchFilter">-->
+<!--            <param name="levelToMatch" value="INFO"/>-->
+<!--            <param name="acceptOnMatch" value="false"/>-->
+<!--        </filter>-->
+
+        <!-- 只输出[DEBUG, ERROR]之间的日志 -->
+<!--        <filter class="org.apache.log4j.varia.LevelRangeFilter">-->
+<!--            <param name="levelMin" value="DEBUG"/>-->
+<!--            <param name="levelMax" value="ERROR"/>-->
+<!--        </filter>-->
+
+        <!-- 关闭打印信息中包含字符串"E"的日志 -->
+        <filter class="org.apache.log4j.varia.StringMatchFilter">
+            <param name="stringToMatch" value="E"/>
+            <param name="acceptOnMatch" value="false"/>
+        </filter>
+    </appender>
+
+    <appender name="file" class="org.apache.log4j.FileAppender">
+        <param name="encoding" value="UTF-8"/>
+        <param name="file" value="G:/logs/log4j.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%t]: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="rollingFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="encoding" value="UTF-8"/>
+        <param name="file" value="G:/logs/log4j_roll.log"/>
+        <param name="maxFileSize" value="100KB"/>
+        <param name="maxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%t]: %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="encoding" value="UTF-8"/>
+        <param name="file" value="G:/logs/log4j.log"/>
+        <param name="datePattern" value="'.'yyyy-MM-dd-HH-mm-ss"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%t]: %m%n"/>
+        </layout>
+    </appender>
+
+
+    <!-- 设置子Logger -->
+    <logger name="com.prger" additivity="false">
+        <level value="TRACE"/>
+        <appender-ref ref="console"/>
+<!--        <appender-ref ref="file"/>-->
+    </logger>
+
+    <root>
+        <level value="WARN"/>
+        <appender-ref ref="console"/>
+    </root>
+</log4j:configuration>
