@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jiakao?serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+logging:
+  level:
+    com.prger.jk.mapper: debug
+
+mybatis:
+  type-aliases-package: com.prger.jk.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true

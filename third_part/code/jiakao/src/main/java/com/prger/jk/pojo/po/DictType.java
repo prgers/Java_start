@@ -1,4 +1,4 @@
-package com.prger.pojo.po;
+package com.prger.jk.pojo.po;
 
 public class DictType {
     private Long id;
